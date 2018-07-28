@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "答 题",
+  "usingComponents": {
+    "circle": "/components/circle/circle"
+  }
+}

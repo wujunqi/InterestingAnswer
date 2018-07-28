@@ -1,0 +1,47 @@
+
+
+
+.modal-dialog {
+  position: fixed;
+  top: 120rpx; 
+  height: 860rpx;
+  left: 60rpx;
+  right: 60rpx; 
+  z-index: 9999;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525182309329.jpg")
+}
+
+.content-area{
+  display: flex;
+  height: 820rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80rpx 30rpx;
+}
+
+.alert_textArea {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 38rpx;
+    width: 500rpx;
+    margin-bottom: 130rpx;
+    margin-top: 30rpx;
+    text-align: center;
+}
+
+.giftImage{
+  width: 380rpx;
+  height: 280rpx;
+  margin-top: 30rpx;
+}
+
+.closeImg{
+  height: 160rpx;
+  width: 160rpx;
+  margin-top: 40rpx;
+
+}

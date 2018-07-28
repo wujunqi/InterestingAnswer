@@ -1,0 +1,31 @@
+<!--pages/quizePage/quizePage.wxml-->
+<import src="/components/alertSheets/alertSheets.wxml" />
+<view class="container" catchtouchmove="preventTouchMove">
+  <view class='page_section1' style='height: 524rpx; ' catchtap="catchtap">
+    <view class="content-self">
+      <block wx:for="{{contentArr}}" wx:key="contentArr">
+        <view class="item-button" style='background-image: url({{index+currlowestlevelid>curlevelid?"http://weiyinyue.music.sina.com.cn/movie_still/176848_1525182308372.jpg":"http://weiyinyue.music.sina.com.cn/movie_still/176848_1525182309220.jpg"}});' id="{{item.code}}" bindtap='chooseState'>
+          <text wx:if='{{index+currlowestlevelid<=curlevelid}}' >{{index+1}}</text>
+          <text style='padding-bottom:30rpx;margin-top:46rpx'>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+    <image src='/icons/longline.png' style='height:182rpx;width:54rpx;margin-left:58rpx'></image>
+    <image src='/icons/longline.png' style='height:182rpx;width:54rpx;margin-left:460rpx'></image>
+  </view>
+
+  <view class='page_section1' style='height: 362rpx;margin-bottom:30rpx '>
+    <view style="display: flex; align-items: center">
+      <text class='tip_content'>{{currlowestlevelid+5==curlevelid?"恭喜你\n已获得最高等级":"一共10题，答对8题\n才能闯关成功"}}</text>
+    </view>
+    <view wx:if='{{currlowestlevelid+5>curlevelid}}' class='chuangguan' bindtap='gotoQuize'>开始闯关</view>
+
+  </view>
+  <view class='pageFooter'>
+    <view bindtap='goback' class='footer-self' style='background-image: url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525182310273.jpg");width:160rpx;margin-left:-30rpx'>首页
+    </view>
+    <view bindtap='gameExplain' class='footer-self' style='background-image: url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525526719878.jpg");width:194rpx;margin-right:-30rpx'>游戏说明
+    </view>
+  </view>
+</view>
+<template is="alertSheets" data="{{ ...$alertSheets }}" />

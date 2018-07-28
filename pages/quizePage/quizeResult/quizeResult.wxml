@@ -1,0 +1,30 @@
+<!--pages/quizePage/quizeResult/quizeResult.wxml-->
+<view class="modal-mask" catchtouchmove="preventTouchMove">
+</view>
+<view class="modal-dialog" wx:if="{{isSuccess==1}}" scroll-y>
+  <view class="modal-success" style='width:{{0.8*screenWidth}}px;'>
+    <text style='margin-top:30rpx;'>恭 喜 你</text>
+    <text style='font-size:60rpx;margin-top:-50rpx;'>闯 关 成 功!</text>
+    <view class='jiangli'>
+      <text style='margin-right:30rpx'>获得等级</text>
+      <image class='image-self' src='/icons/gold-coin.png'></image>
+      <text>1000</text>
+    </view>
+    <image style='height:200rpx;width:180rpx' src='/icons/woman.png'></image>
+    <text style='margin-top:-30rpx;font-size:34rpx'>{{levelName}}</text>
+    <text style='font-size:32rpx;text-align: center;padding-bottom:20rpx'>你还需要努力的学习更多健康知识，\n让我们一起加油</text>
+
+  </view>
+  <view bindtap='goonChuanguan' class='goonQuize' style='background-image:url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525231213904.jpg");'> 继续闯关</view>
+  <view class='pageFooter'>
+    <view bindtap='gotoReview' class='footer-self' style='background-image:url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525265865553.jpg");width: 210rpx;'>本局回顾</view>
+    <button open-type='share' class='footer-self footer-share'>分享</button>
+    <view class='footer-self' style='background-image:url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525231213233.jpg");width: 180rpx;'>保存图片</view>
+  </view>
+
+</view>
+<view wx:else class="modal-dialog" scroll-y style='background-image:url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525248859719.jpg");'>
+
+  <view bindtap='gotoChuanguan' class='reQuize' style='background-image:url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525231213904.jpg");'> 重新闯关</view>
+  <view bindtap='gotoReview' class='reLook' style='background-image:url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525231213233.jpg")'>回顾本局</view>
+</view>

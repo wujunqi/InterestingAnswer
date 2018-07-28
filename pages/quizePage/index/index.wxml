@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<import src='/commonView/circleProgress/circleProgress.wxml' />
+
+<view class="container" catchtouchmove="preventTouchMove">
+  <image class='image0' src='/icons/quize/beautiful.png'></image>
+  <view class='bg bg1'  />
+  <view class='bg bg2' >
+  </view>
+  <view class='bg bg3'>
+    <view style='margin:30rpx 40rpx 0'>已答对: {{rightNum}}</view>
+    <view style="padding-left:400rpx;margin-top:-40px">
+      <template is='circleProgress' data='{{...circleProgress}}' />
+    </view>
+    <view class='{{className}}'>
+      <view class='biaoti-nOfItems '> 第{{idx+1}}题</view>
+      <view>
+        <view class="title">{{postList[idx].title}}</view>
+      </view>
+      <scroll-view>
+        <block wx:for='{{postList[idx].content}}' wx:key='content'>
+          <view class="form-container" id='{{index}}' bindtap="btnOpClick">
+            <image class='abcd' src='{{"/icons/quize/pic"+index+".png"}}'></image>
+            <view class='contents'>{{postList[idx].content[index]}}</view>
+             <image wx:if='{{isResult&&index==postList[idx].answer}}' style='width:60rpx;height:60rpx;margin-left:-60rpx' src='/icons/quize/right.png'></image> 
+             <image wx:elif='{{isResult&&index==select}}' style='width:60rpx;height:60rpx;margin-left:-60rpx' src='/icons/quize/wrong.png'></image>
+          </view>
+        </block>
+
+      </scroll-view>
+    </view>
+    <view bindtap='goBack' class='footer-self' >首页
+    </view>
+  </view>
+</view>

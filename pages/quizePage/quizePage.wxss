@@ -1,0 +1,70 @@
+/* pages/quizePage/quizePage.wxss */
+@import "../../components/alertSheets/alertSheets.wxss";
+.page_section1 {
+  margin: 0rpx 0rpx 60rpx 0rpx;
+  background-color: #FBEFE0;
+  border-radius: 40rpx;
+  border-width: thick;
+  border-color: black;
+  border-style: solid;
+  background-image: url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525182309799.jpg");
+}
+
+.item-button{
+  width: 180rpx; 
+  height: 180rpx;
+  font-size: 28rpx;
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  
+  align-items: center;
+  margin:  38rpx 20rpx 20rpx 20rpx;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content-self{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: row;
+  margin-left: 10rpx  
+}
+
+.tip_content {
+  flex: 1;
+  font-size: 36rpx;
+  margin: 90rpx 30rpx 20rpx ;
+  text-align: center;
+  color: black; 
+}
+
+.chuangguan{
+  display: flex;
+  flex: 1;
+  margin: 10rpx 130rpx;
+  height: 120rpx;
+  align-items: center;
+  justify-content: center;
+  background-image: url("http://weiyinyue.music.sina.com.cn/movie_still/176848_1525182309892.jpg");
+  background-repeat:no-repeat;
+  background-size: contain;
+}
+
+.pageFooter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.footer-self{
+  height:80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat:no-repeat;
+  background-size: contain;
+}
